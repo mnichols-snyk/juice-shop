@@ -119,7 +119,7 @@ describe('/rest/products/reviews', () => {
 
   describe('challenge "Multiple Likes"', () => {
     beforeEach(() => {
-      cy.login({ email: 'mc.safesearch', password: 'Mr. N00dles' })
+      cy.login({ email: Cypress.env('email'), password: Cypress.env('password') })
     })
 
     it('should be possible to like reviews multiple times', () => {
